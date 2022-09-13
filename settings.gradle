@@ -1,0 +1,3 @@
+rootProject.name = "MutiTab"
+include ':app'
+include ':XMultiTabModule'
