@@ -6,16 +6,16 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.jd.mobile.image.JDImageLoader
 import com.mumu.mutitab.OnTabChangedListener
-import com.mumu.mutitab.bottom.BottomNavigationLayout
-import com.mumu.mutitab.bottom.IDisplayImage
-import com.mumu.mutitab.bottom.ITabItem
-import com.mumu.mutitab.bottom.SimpleNavigationAdapter
+import com.mumu.mutitab.MultiTabNavigationLayout
+import com.mumu.mutitab.IDisplayImage
+import com.mumu.mutitab.ITabItem
+import com.mumu.mutitab.SimpleNavigationAdapter
 
 class MainActivity : AppCompatActivity() {
 
     private val mContentText: TextView by lazy { findViewById<TextView>(R.id.contentText) }
-    private val mBottomLayout: BottomNavigationLayout by lazy {
-        findViewById<BottomNavigationLayout>(
+    private val mBottomLayout: MultiTabNavigationLayout by lazy {
+        findViewById<MultiTabNavigationLayout>(
             R.id.bottomLayout
         )
     }
@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         initData()
     }
 
@@ -64,17 +63,20 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         }
+        //设置Tab切换回调监听
         mBottomLayout.setTabChangedListener(object : OnTabChangedListener {
             override fun onChanged(position: Int, isFromClick: Boolean) {
                 mContentText.text = position.toString()
             }
 
         })
+        //使用简单模式，只支持加载图片，需要创建IDisplayImage对象加载图片
         val display = object : IDisplayImage {
             override fun displayImage(imageUrl: String?, view: View) {
                 JDImageLoader.display(imageUrl, view)
             }
         }
+        //简单模式适配器
         val adapter = object : SimpleNavigationAdapter<TabData>(data, display) {
             override fun getSelectIndex(): Int {
                 return 1

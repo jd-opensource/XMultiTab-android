@@ -69,7 +69,7 @@ abstract class NavigationAdapter {
     }
 
     /**
-     * 是的等分，默认宽度等分，高度充满
+     * 是否等分，默认宽度等分，高度充满
      */
     open fun isEqually(): Boolean {
         return true
