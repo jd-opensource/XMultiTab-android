@@ -170,7 +170,9 @@ abstract class NavigationAdapter {
 
 1.**简单模式下已经实现了createItemView方法默认创建的ImageView，以及getSelectIndex方法默认选中位置0**
 
-2.**使用SimpleNavigationAdapter仅需传递数据源集合（必须实现`ITabItem`接口），详细使用可以参考Demo MainActivity类**
+2.**简单模式下使用SimpleNavigationAdapter仅需传递数据源集合（必须实现`ITabItem`接口）和 实现图片加载加载，详细使用可以参考Demo `MainActivity类`**
+
+3.**简单模式如需自定义其他配置使用方式和普通模式下一致，具体可参考`3.2适配器--通用模式`相关配置方法**
 
 
 
