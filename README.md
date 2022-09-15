@@ -15,6 +15,7 @@
 ## 2）演示效果
 
 **运行app模块下DEMO工程或者直接安装app目录下`app-debug.apk`安装包查看效果**
+
 ![](https://img13.360buyimg.com/imagetools/jfs/t1/190090/26/28199/565488/6322d2eaE2b0dfeb3/f7494a797c4fc184.gif)
 
 ## 3）使用说明
@@ -180,6 +181,7 @@ abstract class NavigationAdapter {
 2.**简单模式下使用SimpleNavigationAdapter仅需传递数据源集合（必须实现`ITabItem`接口）和 实现图片加载加载，详细使用可以参考Demo `MainActivity类`**
 
 3.**简单模式如需自定义其他配置使用方式和普通模式下一致，具体可参考`3.2适配器--通用模式`相关配置方法**
+
 
 
 
