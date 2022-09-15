@@ -1,5 +1,6 @@
 package com.mumu.mutitab.bottom
 
+import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
@@ -35,6 +36,7 @@ open class SimpleNavigationAdapter<T : ITabItem>(
                 simpleItemView.layoutParams =
                     LinearLayout.LayoutParams(width, it.getSpecialTabHeight()).apply {
                         weight = 1f
+                        gravity = Gravity.BOTTOM
                     }
             }
             simpleItemView.setData(it)

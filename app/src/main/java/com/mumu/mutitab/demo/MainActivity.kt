@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                     "https://m.360buyimg.com/seckillcms/jfs/t1/146133/9/30162/85583/631b09beEe844b9d7/52d131299c316d84.gif",
                     "",
                     true,
-                    DPIUtil.dp2px(this@MainActivity, 50f)
+                    DPIUtil.dp2px(this@MainActivity, 60f)
                 )
             )
             add(
