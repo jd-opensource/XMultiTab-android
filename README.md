@@ -4,7 +4,7 @@
 
 ## 项目介绍
 
-**导航多Tab容器开源库，支持自定义：1、底部导航Tab子View 2、导航Tab数量以及默认选中位置  3、导航Tab高度以及异形Tab等配置**
+**导航多Tab容器开源库，支持自定义：1、导航Tab子View 2、导航Tab数量以及默认选中位置  3、导航Tab高度以及异形Tab等配置**
 
 ## 演示效果
 
@@ -126,11 +126,12 @@ abstract class NavigationAdapter {
 ```
 
 3.**使用参考（具体可参考如下两个类）**
-**简单模式适配器类：**
-> SimpleNavigationAdapter   com.mumu.mutitab.SimpleNavigationAdapter
 
-**简单模式容器子View：**
-> SimpleItemView   com.mumu.mutitab.SimpleItemView
+> 简单模式适配器类：
+>> SimpleNavigationAdapter   com.mumu.mutitab.SimpleNavigationAdapter
+
+> 简单模式容器子View：
+>> SimpleItemView   com.mumu.mutitab.SimpleItemView
 
 ### 3.3 适配器--简单模式
 
@@ -166,7 +167,9 @@ abstract class NavigationAdapter {
        
 ```
 ##### 说明
+
 1.**简单模式下已经实现了createItemView方法默认创建的ImageView，以及getSelectIndex方法默认选中位置0**
+
 2.**使用SimpleNavigationAdapter仅需传递数据源集合（必须实现`ITabItem`接口），详细使用可以参考Demo MainActivity类**
 
 
